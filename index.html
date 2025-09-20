@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Birthday | My Sweety Girl</title>
+</head>
+<style>
+    @font-face {
+        font-family: CustomFont2;
+        src: url('assets/fonts/adelia/adelia.ttf') format('truetype');
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: CustomFont3;
+        src: url('assets/fonts/luofuchun/fonts/luofuchun_roboto.ttf') format('truetype');
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 10px;
+        font-family: CustomFont3;
+    }
+    .focusThCircle {
+        background-color: #eaeffe;
+        animation: focusThCircleAnim 1.4s infinite;
+    }
+    @keyframes focusThCircleAnim {
+        0% {
+            box-shadow: 0 0 0 0 rgba(151, 135, 243, 0.7);
+            background-color: #eaeffe;
+        }
+        50% {
+            box-shadow: 0 0 0 20px rgba(151, 135, 243, 0);
+            background-color: #9787f3;
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(151, 135, 243, 0);
+            background-color: #eaeffe;
+        }
+        
+    }
+</style>
+
+<body class="bg-[#eaeffe]">
+    <main class="w-full h-screen flex flex-col gap-2">
+        <!-- top -->
+        <div class="frameTop w-full h-screen flex flex-col gap-6 justify-center items-center">
+            <span class="px-8 py-3 text-[10px] bg-[#2d274b] text-[#eaeffe] rounded-[100px]">From your Boy Friend</span>
+            <div class="text-center flex flex-col">
+                <h1 class="text-4xl font-bold text-[#2d274b]">HAPPY BIRTHDAY</h1>
+                <h2 class="text-xs font-bold font-[CustomFont2] text-[#2d274b]">Frichintia Niken Gita Natasyah</h2>
+            </div>
+        </div>
+        <!--  -->
+        <div class="flex flex-col gap-7">
+        <!-- medium -->
+        <div class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
+            <ul class="flex justify-between items-center">
+                <li>
+                    <h1>19</h1>
+                    <p>th</p>
+                    <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">dulu</button>
+                </li>
+                <li class="relative flex justify-center items-center">
+                    <div class="focusThCircle absolute bottom-[0px] p-3 rounded-[100px] flex justify-center items-center">
+                        <div class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
+                            <h1 class="text-4xl">20</h1>
+                            <p>th</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h1>21</h1>
+                    <p>th</p>
+                    <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">esok</button>
+                </li>
+            </ul>
+            <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-3 rounded-[100px]" id="RekapBtn">LIHAT REKAP MASA LALU</button>
+        </div>
+        <!-- Bottom -->
+        <div class="frameBottom m-t-[10vh]">
+            <div class="relative bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center">
+                <div class="absolute w-[90%] rounded-b-[100%] bg-white py-6">
+                </div>
+                <div class="absolute top-[-3vh] w-full bg-[#9787f3] rounded-[10px] rounded-t-[100%] py-6">
+
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        </div>
+    </main>
+</body>
+<!-- <script>
+    const umurSpan = document.getElementById('umurSpan');
+    const rayakanBtn = document.getElementById('rayakanBtn');
+    let n = 100;
+    function UpdateTimer() {
+        rayakanBtn.addEventListener('click', () => {
+            umurSpan.innerText = "20";
+            setTimeout(() => {
+                const down = setInterval(() => {
+                    n--;
+                    umurSpan.innerText = n;
+                    let newWJ = n;
+                    if (newWJ <= 1) {
+                        // window.location.href = 'Anniversary.html';
+                    }
+                    if (n <= 20) {
+                        clearInterval(down);
+                        umurSpan.style = "color: red; font-size: 2rem; font-weight: bold;";
+                    }
+                }, 50);
+            }, 2000)
+
+        })
+    }
+    UpdateTimer();
+</script> -->
+
+</html>
