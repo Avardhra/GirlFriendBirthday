@@ -37,24 +37,29 @@
         padding: 10px;
         font-family: CustomFont3;
     }
+
     .focusThCircle {
-        background-color: #eaeffe;
+        background-color: #9787f3;
         animation: focusThCircleAnim 1.4s infinite;
+        padding: 10px;
     }
+
     @keyframes focusThCircleAnim {
         0% {
             box-shadow: 0 0 0 0 rgba(151, 135, 243, 0.7);
-            background-color: #eaeffe;
         }
+
         50% {
-            box-shadow: 0 0 0 20px rgba(151, 135, 243, 0);
-            background-color: #9787f3;
+            box-shadow: 0 0 0 30px rgba(151, 135, 243, 0);
+            transform: scale(1.1);
+
         }
+
         100% {
             box-shadow: 0 0 0 0 rgba(151, 135, 243, 0);
-            background-color: #eaeffe;
+            transform: scale(1);
         }
-        
+
     }
 </style>
 
@@ -70,41 +75,44 @@
         </div>
         <!--  -->
         <div class="flex flex-col gap-7">
-        <!-- medium -->
-        <div class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
-            <ul class="flex justify-between items-center">
-                <li>
-                    <h1>19</h1>
-                    <p>th</p>
-                    <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">dulu</button>
-                </li>
-                <li class="relative flex justify-center items-center">
-                    <div class="focusThCircle absolute bottom-[0px] p-3 rounded-[100px] flex justify-center items-center">
-                        <div class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
-                            <h1 class="text-4xl">20</h1>
-                            <p>th</p>
+            <!-- medium -->
+            <div class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
+                <ul class="flex justify-between items-center">
+                    <li>
+                        <h1>19</h1>
+                        <p>th</p>
+                        <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">dulu</button>
+                    </li>
+                    <li class="relative flex justify-center items-center">
+                        <div
+                            class="focusThCircle absolute bottom-[0px] rounded-[100px] flex justify-center items-center">
+                            <div
+                                class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
+                                <h1 class="text-4xl">20</h1>
+                                <p>th</p>
+                            </div>
                         </div>
+                    </li>
+                    <li>
+                        <h1>21</h1>
+                        <p>th</p>
+                        <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">esok</button>
+                    </li>
+                </ul>
+                <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-3 rounded-[100px]" id="RekapBtn">LIHAT REKAP
+                    MASA LALU</button>
+            </div>
+            <!-- Bottom -->
+            <div class="frameBottom m-t-[10vh]">
+                <div class="relative bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center">
+                    <div class="absolute w-[90%] rounded-b-[100%] bg-white py-6">
                     </div>
-                </li>
-                <li>
-                    <h1>21</h1>
-                    <p>th</p>
-                    <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">esok</button>
-                </li>
-            </ul>
-            <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-3 rounded-[100px]" id="RekapBtn">LIHAT REKAP MASA LALU</button>
-        </div>
-        <!-- Bottom -->
-        <div class="frameBottom m-t-[10vh]">
-            <div class="relative bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center">
-                <div class="absolute w-[90%] rounded-b-[100%] bg-white py-6">
-                </div>
-                <div class="absolute top-[-3vh] w-full bg-[#9787f3] rounded-[10px] rounded-t-[100%] py-6">
+                    <div class="absolute top-[-3vh] w-full bg-[#9787f3] rounded-[10px] rounded-t-[100%] py-6">
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--  -->
+            <!--  -->
         </div>
     </main>
 </body>
