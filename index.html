@@ -61,6 +61,12 @@
         }
 
     }
+
+    .amplopHead {
+        top: 0vh;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
 </style>
 
 <body class="bg-[#eaeffe]">
@@ -91,10 +97,10 @@
                         </li>
                         <li class="relative flex justify-center items-center">
                             <div
-                                class="focusThCircle absolute bottom-[0px] rounded-[100px] flex justify-center items-center">
+                                class="focusThCircle absolute bottom-[0px] rounded-[100px] flex justify-center items-center ">
                                 <div
-                                    class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
-                                    <h1 class="text-4xl">20</h1>
+                                    class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center shadow-inner shadow-[0_0_10px] shadow-red-200">
+                                    <h1 class="text-4xl" id="testID">20</h1>
                                     <p>th</p>
                                 </div>
                             </div>
@@ -110,16 +116,18 @@
                         MASA LALU</button>
                 </div>
                 <!-- Bottom -->
-                <div class="frameBottom m-t-[10vh]">
-                    <div class="relative bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center">
+
+                <div class="relative frameBottom m-t-[10vh] flex flex-col justify-center items-center">
+                    <div class="absolute bottom-[0] rounded w-[40vh] h-[0vh] bg-red-400 z-[0] overflow transition-all duration-500 ease-in-out" id="suratUp"></div>
+                    </div>
+                    <div class="relative w-full  bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center"
+                        id="amplopHead">
                         <div class="absolute w-[90%] rounded-b-[100%] bg-white py-6">
                         </div>
-                        <div class="absolute top-[-3vh] w-full bg-[#9787f3] rounded-[10px] rounded-t-[100%] py-6">
-
+                        <div class="amplopHead absolute w-full bg-[#9787f3]  py-6">
                         </div>
                     </div>
                 </div>
-                <!--  -->
             </div>
             <!--  -->
     </div>
@@ -156,5 +164,29 @@
     }
     UpdateTimer();
 </script> -->
+<script>
+    const RekapBtn = document.getElementById('RekapBtn');
+    RekapBtn.addEventListener('click', () => {
+        window.location.href = 'rekap.html';
+    });
+    const amplopHeadClass = document.querySelector('.amplopHead');
+    const amplopHead = document.getElementById('amplopHead');
+    const testID = document.getElementById('testID');
+    const suratUp = document.getElementById('suratUp');
+    let amplopHeadCheck = false;
+    amplopHead.addEventListener('click', () => {
+        if (!amplopHeadCheck) {
+            amplopHeadClass.style = "border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 100%; border-top-right-radius: 100%; top: -3vh;";
+            suratUp.classList.add("h-[80vh]");
+            amplopHeadCheck = true;
+            testID.innerText = "true";
+        } else {
+            amplopHeadClass.style = "border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 0%; border-top-right-radius: 0%; top: 0vh;";
+            suratUp.classList.remove("h-[80vh]");
+            amplopHeadCheck = false;
+            testID.innerText = "false";
+        }
+    });
+</script>
 
 </html>
