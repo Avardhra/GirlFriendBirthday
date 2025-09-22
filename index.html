@@ -71,8 +71,6 @@
 
 <body class="bg-[#eaeffe]">
     <div class="block sm:hidden">
-        <!-- Konten asli web untuk HP -->
-
         <!--  -->
         <main class="w-full h-screen flex flex-col gap-2">
             <!-- top -->
@@ -81,7 +79,8 @@
                     Friend</span>
                 <div class="text-center flex flex-col">
                     <h1 class="text-4xl font-bold text-[#2d274b]">HAPPY BIRTHDAY</h1>
-                    <h2 class="text-xs font-bold font-[CustomFont2] text-[#2d274b]">Frichintia Niken Gita Natasyah</h2>
+                    <h2 class="text-xs font-bold font-[CustomFont2] text-[#2d274b]">Frichintia Niken Gita Natasyah
+                    </h2>
                 </div>
             </div>
             <!--  -->
@@ -118,14 +117,17 @@
                 <!-- Bottom -->
 
                 <div class="relative frameBottom m-t-[10vh] flex flex-col justify-center items-center">
-                    <div class="absolute bottom-[0] rounded w-[40vh] h-[0vh] bg-red-400 z-[0] overflow transition-all duration-500 ease-in-out" id="suratUp"></div>
-                    </div>
+
                     <div class="relative w-full  bg-[#2d274b] h-[25vh] rounded-[10px] flex flex-col items-center"
                         id="amplopHead">
-                        <div class="absolute w-[90%] rounded-b-[100%] bg-white py-6">
+
+                        <div class="absolute w-[90%] bg-white py-5">
                         </div>
                         <div class="amplopHead absolute w-full bg-[#9787f3]  py-6">
                         </div>
+                        <div class="absolute bottom-[20.4vh] w-[40vh] h-[0vh] bg-[#9787f3] rounded-t-[2px] z-[0] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out"
+                            id="suratUp"></div>
+                        <div class="absolute bottom-[0] w-full bg-[#2d274b] h-[19vh] rounded-[10px] z-[1]"></div>
                     </div>
                 </div>
             </div>
@@ -177,12 +179,14 @@
     amplopHead.addEventListener('click', () => {
         if (!amplopHeadCheck) {
             amplopHeadClass.style = "border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 100%; border-top-right-radius: 100%; top: -3vh;";
-            suratUp.classList.add("h-[80vh]");
+            suratUp.classList.add("h-[60vh]");
             amplopHeadCheck = true;
             testID.innerText = "true";
         } else {
-            amplopHeadClass.style = "border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 0%; border-top-right-radius: 0%; top: 0vh;";
-            suratUp.classList.remove("h-[80vh]");
+            suratUp.classList.remove("h-[60vh]");
+            setTimeout(() => {
+                amplopHeadClass.style = "border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 0; border-top-right-radius: 0; top: 0vh;";
+            }, 550);
             amplopHeadCheck = false;
             testID.innerText = "false";
         }
