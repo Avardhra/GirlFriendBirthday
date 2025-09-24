@@ -47,17 +47,26 @@
     @keyframes focusThCircleAnim {
         0% {
             box-shadow: 0 0 0 0 rgba(151, 135, 243, 0.7);
+            transform: scale(0.9);
+
         }
+        /* 25%{
+            transform: scale(1.1);
+        }
+        45% {
+            transform: scale(1);
+        } */
 
         50% {
             box-shadow: 0 0 0 30px rgba(151, 135, 243, 0);
-            /* transform: scale(1.1); */
-
+        }
+        90% {
+            transform: scale(1);
         }
 
         100% {
             box-shadow: 0 0 0 0 rgba(151, 135, 243, 0);
-            /* transform: scale(1); */
+            transform: scale(0.9);
         }
 
     }
@@ -103,7 +112,7 @@
                             <div
                                 class="focusThCircle absolute bottom-[0px] rounded-[100px] flex justify-center items-center ">
                                 <div
-                                    class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center shadow-inner shadow-[0_0_10px] shadow-red-200">
+                                    class="bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
                                     <h1 class="text-4xl" id="testID">20</h1>
                                     <p>th</p>
                                 </div>
@@ -127,8 +136,25 @@
                         <div class="absolute bottom-[4vh] w-[40vh] h-[0vh] bg-white p-2 z-[10] rounded-t-[10px] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out" id="suratUp">
                             <div class="flex flex-col justify-center items-center">
                                 <h1 class="text-2xl font-bold">HAPPY BIRTHDAY</h1>
-                            <div class=" w-full h-full" id="garisIsiSurat">
-                                
+                                <div class="w-full ">
+                                    <h2>From your boyfriend</h2>
+
+                                </div>
+                            <div class="relative w-full h-full top-[10px]" id="garisIsiSurat">
+                                <hr>
+                                Selamat ulang tahun sayangku, semoga semua impian dan harapanmu
+                                tercapai di usia yang baru ini.
+                                <hr>
+                                Aku berdoa agar kamu selalu diberi kesehatan, kebahagiaan, dan kesuksesan dalam segala hal yang kamu
+                                lakukan. Terima kasih telah menjadi bagian penting dalam hidupku.
+                                <hr>
+                                Aku sangat bersyukur memiliki kamu sebagai pacarku. Aku mencintaimu
+                                lebih dari kata-kata yang bisa diungkapkan.
+                                <hr>
+                                Semoga hari ulang tahunmu   
+                                dipenuhi dengan cinta, tawa, dan kebahagiaan yang tak terlupakan. Selamat
+                                ulang tahun, sayangku!
+                                <hr>
                             </div>
                             </div>
                         </div>
