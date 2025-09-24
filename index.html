@@ -69,6 +69,9 @@
         z-index: 11;
         transition: all 0.2s ease-in-out;
     }
+    hr {
+        margin: 10px 0;
+    }
 </style>
 
 <body class="bg-[#eaeffe]">
@@ -86,7 +89,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="flex flex-col gap-7">
+            <div class="flex flex-col gap-10">
                 <!-- medium -->
                 <div
                     class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
@@ -121,7 +124,14 @@
                 <div class="relative frameBottom m-t-[10vh] flex flex-col justify-center items-center">
                     <div class="relative w-full h-[20vh] rounded-[10px] flex flex-col items-center" id="amplopHead">
                         <div class="amplopHead absolute w-full bg-[#9787f3] py-5"></div>
-                        <div class="absolute bottom-[2vh] w-[40vh] h-[0vh] bg-blue-200 z-[10] rounded-t-[2px] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out" id="suratUp"></div>
+                        <div class="absolute bottom-[4vh] w-[40vh] h-[0vh] bg-white p-2 z-[10] rounded-t-[10px] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out" id="suratUp">
+                            <div class="flex flex-col justify-center items-center">
+                                <h1 class="text-2xl font-bold">HAPPY BIRTHDAY</h1>
+                            <div class=" w-full h-full" id="garisIsiSurat">
+                                
+                            </div>
+                            </div>
+                        </div>
                         <div class="relative bg-[#2d274b] w-full h-screen z-[10] rounded-b-[40px] flex justify-center items-center">
                             <div class="absolute top-[20px] w-[90%] p-1 rounded border-[1px] border-dashed border-[#eaeffe] opacity-[0.5]"></div>
                         </div>
@@ -176,11 +186,11 @@
     amplopHead.addEventListener('click', () => {
         if (!amplopHeadCheck) {
             amplopHeadClass.style = "border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 100px; border-top-right-radius: 100px; top: -4.2vh; z-index: 8;";
-            suratUp.classList.add("h-[60vh]");
+            suratUp.classList.add("h-[80vh]");
             amplopHeadCheck = true;
             testID.innerText = "true";
         } else {
-            suratUp.classList.remove("h-[60vh]");
+            suratUp.classList.remove("h-[80vh]");
             setTimeout(() => {
                 amplopHeadClass.style = "border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border-top-left-radius: 0; border-top-right-radius: 0; top: 0vh; z-index: 11;";
             }, 250);
@@ -188,6 +198,9 @@
             testID.innerText = "false";
         }
     });
+
+    // 
+    
 </script>
 
 </html>

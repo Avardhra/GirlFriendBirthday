@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Auto Repeat</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 400px; /* tinggi fix */
+      border: 1px solid black;
+      
+      position: relative;
+    }
+    hr {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="box"></div>
+
+  <script>
+    const container = document.getElementById("box");
+
+    function fillHr() {
+      container.innerHTML = ""; // hapus isi dulu
+      const hr = document.createElement("hr");
+      container.appendChild(hr);
+
+      let totalHeight = hr.offsetHeight; // tinggi pertama
+      while (totalHeight + hr.offsetHeight <= container.clientHeight) {
+        const newHr = document.createElement("hr");
+        container.appendChild(newHr);
+        totalHeight += newHr.offsetHeight;
+      }
+    }
+
+    // panggil pertama kali
+    fillHr();
+
+    // kalau window resize, hitung ulang
+    window.addEventListener("resize", fillHr);
+  </script>
+</body>
+</html>
