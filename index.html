@@ -133,14 +133,13 @@
                 <div class="relative frameBottom m-t-[10vh] flex flex-col justify-center items-center">
                     <div class="relative w-full h-[20vh] rounded-[10px] flex flex-col items-center" id="amplopHead">
                         <div class="amplopHead absolute w-full bg-[#9787f3] py-5"></div>
-                        <div class="absolute bottom-[4vh] w-[40vh] h-[0vh] bg-white p-2 z-[10] rounded-t-[10px] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out" id="suratUp">
+                        <div class="absolute bottom-[6vh] w-[40vh] h-[0vh] bg-white p-2 z-[10] rounded-t-[10px] border-t-[0px] border-black shadow-[0_0_200px] shadow-[#eaeffe] overflow transition-all duration-500 ease-in-out" id="suratUp">
                             <div class="flex flex-col justify-center items-center">
                                 <h1 class="text-2xl font-bold">HAPPY BIRTHDAY</h1>
                                 <div class="w-full ">
                                     <h2>From your boyfriend</h2>
-
                                 </div>
-                            <div class="relative w-full h-full top-[10px]" id="garisIsiSurat">
+                            <div class="relative w-full h-full top-[10px] hidden" id="garisIsiSurat">
                                 <hr>
                                 Selamat ulang tahun sayangku, semoga semua impian dan harapanmu
                                 tercapai di usia yang baru ini.
@@ -208,13 +207,18 @@
     const amplopHead = document.getElementById('amplopHead');
     const testID = document.getElementById('testID');
     const suratUp = document.getElementById('suratUp');
+    const garisIsiSurat = document.getElementById('garisIsiSurat');
     let amplopHeadCheck = false;
     amplopHead.addEventListener('click', () => {
         if (!amplopHeadCheck) {
             amplopHeadClass.style = "border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 100px; border-top-right-radius: 100px; top: -4.2vh; z-index: 8;";
-            suratUp.classList.add("h-[80vh]");
+             setTimeout(() => {
+                suratUp.classList.add("h-[80vh]");
+            }, 190);
+            
             amplopHeadCheck = true;
             testID.innerText = "true";
+            garisIsiSurat.style = "display:block;";
         } else {
             suratUp.classList.remove("h-[80vh]");
             setTimeout(() => {
@@ -222,6 +226,7 @@
             }, 250);
             amplopHeadCheck = false;
             testID.innerText = "false";
+            garisIsiSurat.style = "display:none;";
         }
     });
 
