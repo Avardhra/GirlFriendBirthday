@@ -43,6 +43,11 @@
         margin: 0;
         padding: 10px;
         font-family: CustomFont3;
+        background-image: url('assets/particle/ptcl-bg.png');
+        background-repeat: repeat;
+        background-size: auto 200px;
+        background-position: top left;
+        background-color: #ffffff;
     }
 
     .focusThCircle {
@@ -94,7 +99,7 @@
     }
 </style>
 
-<body class="bg-[#eaeffe]">
+<body class="">
     <div class="block sm:hidden">
         <!--  -->
         <main class="w-full h-screen flex flex-col gap-2">
@@ -111,17 +116,11 @@
             <!--  -->
             <div class="flex flex-col gap-10">
                 <!-- medium -->
-                <div
-                    class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
-                    <ul class="flex justify-between items-center">
-                        <li>
-                            <h1>19</h1>
-                            <p>th</p>
-                            <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">dulu</button>
-                        </li>
+                <div class="frameMedium p-2 bg-[#2d274b] rounded-[20px] text-[#9787f3] flex flex-col justify-center gap-2">
+                    <ul class="flex justify-center items-center">
+                        
                         <li class="relative flex justify-center items-center">
-                            <div
-                                class="absolute bottom-[0px] rounded-[100px] flex justify-center items-center ">
+                            <div class="absolute bottom-[0px] rounded-[100px] flex justify-center items-center ">
                                 <div
                                     class="focusThCircle bg-[#2d274b] w-[15vh] h-[15vh] rounded-[100px] flex justify-center items-center">
                                     <h1 class="text-4xl" id="testID">20</h1>
@@ -129,11 +128,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <h1>21</h1>
-                            <p>th</p>
-                            <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-1 rounded-[100px]">esok</button>
-                        </li>
+                
                     </ul>
                     <button class="bg-[#9787f3] text-xs text-[#eaeffe] px-9 py-3 rounded-[100px]" id="RekapBtn">LIHAT
                         REKAP
@@ -154,22 +149,32 @@
                                 <div class="relative w-full h-full top-[10px] hidden" id="garisIsiSurat">
                                     <hr>
                                     <p class="text-sm text-justify w-full">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores sequi deleniti
-                                    rem alias corrupti qui ut laboriosam pariatur laudantium officiis maxime voluptatum
-                                    similique ex, atque odio mollitia. Libero, ex ad!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quasi nostrum sed
-                                    esse, consequatur perferendis laboriosam ut alias nihil at exercitationem magni quod
-                                    autem. Fugit vero ex quaerat temporibus molestiae!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime suscipit laboriosam
-                                    eveniet. Temporibus velit optio commodi saepe sapiente sit, quidem molestiae libero
-                                    cumque neque? Quo aut qui nesciunt optio necessitatibus!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est temporibus dignissimos
-                                    consequuntur aut inventore sunt quidem quae, eius laudantium deserunt ipsam quia
-                                    repellendus quas possimus. Pariatur libero aut similique blanditiis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores sequi deleniti
-                                    rem alias corrupti qui ut laboriosam pariatur laudantium officiis maxime voluptatum
-                                    similique ex, atque odio mollitia. Libero, ex ad!
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores sequi
+                                        deleniti
+                                        rem alias corrupti qui ut laboriosam pariatur laudantium officiis maxime
+                                        voluptatum
+                                        similique ex, atque odio mollitia. Libero, ex ad!
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quasi nostrum
+                                        sed
+                                        esse, consequatur perferendis laboriosam ut alias nihil at exercitationem magni
+                                        quod
+                                        autem. Fugit vero ex quaerat temporibus molestiae!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime suscipit
+                                        laboriosam
+                                        eveniet. Temporibus velit optio commodi saepe sapiente sit, quidem molestiae
+                                        libero
+                                        cumque neque? Quo aut qui nesciunt optio necessitatibus!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est temporibus
+                                        dignissimos
+                                        consequuntur aut inventore sunt quidem quae, eius laudantium deserunt ipsam quia
+                                        repellendus quas possimus. Pariatur libero aut similique blanditiis.Lorem ipsum
+                                        dolor sit amet consectetur, adipisicing elit. Asperiores sequi deleniti
+                                        rem alias corrupti qui ut laboriosam pariatur laudantium officiis maxime
+                                        voluptatum
+                                        similique ex, atque odio mollitia. Libero, ex ad!
                                     </p>
-                                    <button class="bg-black p-2 text-xs text-white contents-center">Klik dimana saja untuk menutup surat</button>
+                                    <button class="bg-black p-2 text-xs text-white contents-center">Klik dimana saja
+                                        untuk menutup surat</button>
                                 </div>
                             </div>
                         </div>
