@@ -50,16 +50,23 @@
         margin: 10px 0;
     }
     .avd_hbdBox {
-        animation: avdHbd 2s ease-in-out infinite;
+        animation: avdHbd 6s ease-in-out infinite;
+         background: linear-gradient(270deg, #f472b6 , #fff0f8 , #e70284);
+        background-size: 800% 800%;
+        color: white;
+        -webkit-background-clip: background;
+        -webkit-text-fill-color: white;
     }
     @keyframes avdHbd {
         0%, 100% {
+            background-position: 0% 50%;
             transform: rotate(2deg);
             border-radius: 0;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 0px;
         } 
         50%{
+            background-position: 100% 50%;
             transform: rotate(-2deg);
             border-top-right-radius: 0px;
             border-bottom-left-radius: 10px;
@@ -71,30 +78,81 @@
     button:hover{
         transform: scale(0.96);
     }
+    
+    .SpecText {
+        background: linear-gradient(270deg, #f472b6 , #fff0f8 , #e70284);
+        background-size: 800% 800%;
+        color: white;
+        -webkit-background-clip: background;
+        -webkit-text-fill-color: white;
+        animation: txtGrad 10s ease infinite;
+    }
+    @keyframes txtGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    90% {}
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+    .loading-hearts { pointer-events: none; }
+    .heart {
+        width: 36px;
+        height: 36px;
+        background: #ff6b81;
+        transform: rotate(-45deg) scale(0.9);
+        animation: heartFloat 1.8s ease-in-out infinite;
+        filter: drop-shadow(0 6px 10px rgba(255,107,129,0.12));
+    }
+    .heart:before,
+    .heart:after {
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: inherit;
+        border-radius: 50%;
+    }
+    .heart:before { top: -18px; left: 0; }
+    .heart:after  { top: 0; left: 18px; }
+
+    .heart-1 { width: 34px; height: 34px; animation-duration: 1.8s; animation-delay: 0s; background: #f9a8d4; } /* pink-300 */
+    .heart-1:before, .heart-1:after { width: 34px; height: 34px; }
+    .heart-2 { width: 46px; height: 46px; animation-duration: 2s; animation-delay: 0.15s; background: #f472b6; } /* pink-400 */
+    .heart-2:before, .heart-2:after { width: 46px; height: 46px; }
+    .heart-3 { width: 28px; height: 28px; animation-duration: 1.6s; animation-delay: 0.3s; background: #fbcfe8; } /* pink-200 */
+    .heart-3:before, .heart-3:after { width: 28px; height: 28px; }
+
+    @keyframes heartFloat {
+        0%   { transform: rotate(-45deg) translateY(0) scale(0.9); opacity: 0.9; }
+        50%  { transform: rotate(-45deg) translateY(-12px) scale(1); opacity: 1; }
+        100% { transform: rotate(-45deg) translateY(0) scale(0.9); opacity: 0.9; }
+    }
+
+    #loadingOverlay.hidden { opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s ease; pointer-events: none; }
+    #loadingOverlay { transition: opacity .6s ease, visibility .6s ease; }
+
 </style>
 
 <body class="">
     <div class="flex flex-col h-screen justify-between sm:hidden">
-       <main class="w-full p-4 rounded flex flex-col items-center">
-        <!-- <div class="bg-pink-400 w-full h-20 rounded-t-[100%] outline outline-4 outline-pink-200 flex ">
-            <i class="fa-solid fa-candle-holder fa-2x text-white m-auto"></i>
-        </div> -->
-        <div class="bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200"></div>
-        <div class="bg-pink-100 w-90 h-20 z-[100] flex items-center justify-between px-10">
-            <!-- <i class="fa-solid fa-cake-candles text-pink-400 text-4xl" aria-hidden="true"></i> -->
-            <h2 class="text-base bg-pink-200 text-white p-2 rounded">19</h2>
-            <h1 class="text-2xl bg-pink-400 text-white p-2 rounded">20Th</h1>
-            <h2 class="text-base bg-pink-200 text-white p-2 rounded">21</h2>
-            <!-- <i class="fa-solid fa-cake-candles text-pink-400 text-4xl" aria-hidden="true"></i> -->
-        </div>
-        <div class="bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200"></div>
-
-       </main>
+        <main class="p-4">
+            <div class="w-full p-2 bg-pink-400 rounded-[100px]">
+            </div>
+        </main>
         <!--  -->
         <main class="w-full  flex flex-col justify-center items-center gap-2">
             <ul class="text-center flex flex-col gap-4">
-                <h1 class="text-2xl font-bold bg-pink-400 text-white p-1 px-4 avd_hbdBox flex items-center gap-2"><i class="bx bxs-tickets"></i>Selamat Ulang Tahun</h1>
-                <p class="text-base">Frichintia Niken Gita Natasyah</p>
+                <h1 class="text-2xl font-bold bg-pink-400 text-white p-1 px-4 avd_hbdBox flex items-center gap-2"></i>Selamat Ulang Tahun</h1>
+                <p class="text-base ">Frichintia Niken Gita Natasyah</p>
             </ul>
             <ul class="p-2 bg-pink-100 rounded">
                 <button id="avdBTNPesan" class="bg-pink-400 text-white p-2 px-4 rounded">Pesan Rahasia</button>
@@ -102,10 +160,6 @@
             </ul>
         </main>
         <main class="w-full flex flex-col gap-2 ">
-            <!-- top -->
-            
-                <!-- Bottom -->
-
                 <div class="relative frameBottom m-t-[10vh] flex flex-col justify-center items-center p-2 opacity-0 " id="avdCTNPesan">
                     <div class="relative w-full h-[20vh] rounded-[10px] flex flex-col items-center" id="amplopHead">
                         <div class="amplopHead absolute w-full bg-pink-400 py-5"></div>
@@ -151,10 +205,25 @@
                             <div
                                 class="absolute top-[20px] w-[90%] p-1 rounded border-[1px] border-dashed border-[#eaeffe] opacity-[0.5]">
                             </div>
-                            <h1 class="absolute text-white">Surat Cinta</h1>
+                            <h1 class="absolute text-white"></h1>
                         </div>
                     </div>
                 </div>
+                <main class="w-full p-4 rounded flex flex-col items-center">
+        <!-- <div class="bg-pink-400 w-full h-20 rounded-t-[100%] outline outline-4 outline-pink-200 flex ">
+            <i class="fa-solid fa-candle-holder fa-2x text-white m-auto"></i>
+        </div> -->
+        <div class="bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200"></div>
+        <div class="bg-pink-100 w-90 h-20 z-[100] flex items-center justify-between px-10">
+            <!-- <i class="fa-solid fa-cake-candles text-pink-400 text-4xl" aria-hidden="true"></i> -->
+            <h2 class="text-base bg-pink-200 text-white p-2 rounded">19</h2>
+            <h1 class="text-2xl bg-pink-400 text-white p-2 rounded">20Th</h1>
+            <h2 class="text-base bg-pink-200 text-white p-2 rounded">21</h2>
+            <!-- <i class="fa-solid fa-cake-candles text-pink-400 text-4xl" aria-hidden="true"></i> -->
+        </div>
+        <div class="bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200"></div>
+
+       </main>
             </div>
             <!--  -->
     </div>
@@ -175,51 +244,12 @@
         </div>
     </div>
 
-    <style>
-    .loading-hearts { pointer-events: none; }
-    .heart {
-        width: 36px;
-        height: 36px;
-        background: #ff6b81;
-        transform: rotate(-45deg) scale(0.9);
-        animation: heartFloat 1.8s ease-in-out infinite;
-        filter: drop-shadow(0 6px 10px rgba(255,107,129,0.12));
-    }
-    .heart:before,
-    .heart:after {
-        content: "";
-        position: absolute;
-        width: 36px;
-        height: 36px;
-        background: inherit;
-        border-radius: 50%;
-    }
-    .heart:before { top: -18px; left: 0; }
-    .heart:after  { top: 0; left: 18px; }
-
-    .heart-1 { width: 34px; height: 34px; animation-duration: 1.8s; animation-delay: 0s; background: #f9a8d4; } /* pink-300 */
-    .heart-1:before, .heart-1:after { width: 34px; height: 34px; }
-    .heart-2 { width: 46px; height: 46px; animation-duration: 2s; animation-delay: 0.15s; background: #f472b6; } /* pink-400 */
-    .heart-2:before, .heart-2:after { width: 46px; height: 46px; }
-    .heart-3 { width: 28px; height: 28px; animation-duration: 1.6s; animation-delay: 0.3s; background: #fbcfe8; } /* pink-200 */
-    .heart-3:before, .heart-3:after { width: 28px; height: 28px; }
-
-    @keyframes heartFloat {
-        0%   { transform: rotate(-45deg) translateY(0) scale(0.9); opacity: 0.9; }
-        50%  { transform: rotate(-45deg) translateY(-12px) scale(1); opacity: 1; }
-        100% { transform: rotate(-45deg) translateY(0) scale(0.9); opacity: 0.9; }
-    }
-
-    #loadingOverlay.hidden { opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s ease; pointer-events: none; }
-    #loadingOverlay { transition: opacity .6s ease, visibility .6s ease; }
-    </style>
-
     <script>
         (function(){
             const overlay = document.getElementById('loadingOverlay');
             const hide = () => overlay && overlay.classList.add('hidden');
 
-            window.addEventListener('load', () => setTimeout(hide, 4500));
+            window.addEventListener('load', () => setTimeout(hide, 400));
             setTimeout(hide, 4500);
 
             overlay.addEventListener('click', hide);

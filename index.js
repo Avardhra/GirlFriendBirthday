@@ -12,7 +12,9 @@
             }, 190);
 
             amplopHeadCheck = true;
-            garisIsiSurat.style = "display:block;";
+            setTimeout(()=>{
+                garisIsiSurat.style = "display:block;";
+            }, 420);
         } else {
             suratUp.classList.remove("h-[75vh]");
             setTimeout(() => {
