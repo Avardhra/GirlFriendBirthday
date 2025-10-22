@@ -140,6 +140,29 @@
     #loadingOverlay.hidden { opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s ease; pointer-events: none; }
     #loadingOverlay { transition: opacity .6s ease, visibility .6s ease; }
 
+    .classHotAN1 {
+        animation:  classHotAN 1.8s ease-in-out infinite;
+    }
+    .classHotAN2 {
+        animation:  classHotAN 1.9s ease-in-out infinite;
+    }
+    .classHotAN3 {
+        animation:  classHotAN 2s ease-in-out infinite;
+    }
+    @keyframes  classHotAN {
+        0%,100%{
+            top: -2rem;
+        }
+        25%, 75%{
+            top: -3rem;
+            filter: drop-shadow(0 0 10px rgb(255, 81, 0));
+
+        }
+        50%{
+            color: rgb(255, 67, 67);
+            top: -2rem;
+        }
+    }
 </style>
 
 <body class="">
@@ -206,8 +229,20 @@
                         </div>
                     </div>
                 </div>
-                <main class="w-full p-4 rounded flex flex-col items-center mb-10">
-                    <div class="bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200"></div>
+                <main class="w-full p-4 rounded flex flex-col items-center mb-8">
+                    <div class="relative bg-pink-400 w-full h-3 rounded outline outline-4 outline-pink-200">
+                        <div class="w-full absolute bottom-[0px] flex justify-center items-center gap-[10rem] z-[-1]">
+                            <div class="relative h-[3rem] p-2 bg-pink-300 outline outline-3 outline-pink-100 rounded flex items-center justify-center">
+                                <i class="absolute top-[-2rem] bx bxs-hot text-2xl text-red-400 classHotAN1"></i>
+                            </div>
+                            <div class="relative h-[5rem] p-2 bg-pink-300 outline outline-3 outline-pink-100 rounded flex items-center justify-center">
+                                <i class="absolute top-[-2rem] bx bxs-hot text-2xl text-red-400 classHotAN2"></i>
+                            </div>
+                            <div class="relative h-[3rem] p-2 bg-pink-300 outline outline-3 outline-pink-100 rounded flex items-center justify-center">
+                                <i class="absolute top-[-2rem] bx bxs-hot text-2xl text-red-400 classHotAN3"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="bg-pink-100 w-[90%] h-20 z-[100] flex items-center justify-between px-10">
                         <h2 class="text-base bg-pink-200 text-white p-2 rounded">19</h2>
                         <h1 class="text-2xl bg-pink-400 text-white p-2 rounded">20Th</h1>
