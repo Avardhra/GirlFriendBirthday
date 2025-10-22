@@ -8,7 +8,7 @@
         if (!amplopHeadCheck) {
             amplopHeadClass.style = "border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 100px; border-top-right-radius: 100px; top: -4.2vh; z-index: 8;";
             setTimeout(() => {
-                suratUp.classList.add("h-[75vh]");
+                suratUp.classList.add("h-[65vh]");
             }, 190);
 
             amplopHeadCheck = true;
@@ -16,7 +16,7 @@
                 garisIsiSurat.style = "display:block;";
             }, 420);
         } else {
-            suratUp.classList.remove("h-[75vh]");
+            suratUp.classList.remove("h-[65vh]");
             setTimeout(() => {
                 amplopHeadClass.style = "border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; border-top-left-radius: 0; border-top-right-radius: 0; top: 0vh; z-index: 11;";
             }, 250);
